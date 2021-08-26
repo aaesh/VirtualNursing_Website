@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+    <link rel="stylesheet" href="/static/search.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <title>takehelp</title>
+
+</head>
+
+<body style="font-family: 'Times New Roman', Times, serif;"><nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/home">TakeHelp</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+          <a class="nav-link" href="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/predict">Predict</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/help">Help</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0" method = POST action="{{ url_for('search') }}">
+        <input class="form-control" style="width: 1000px; margin-right: 10px;" type="text" name="des_search" id="des_search" placeholder="Search">
+        <button class="btn btn-secondary" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+<h1 style="font-family: Comic sans MS; color: white; text-align: center; margin-top: 100px;">TAKEHELP SEARCH</h1>
+<div class="container">
+
+      <!-- /.col-lg-8 -->
+      <div class="col-lg-5" style="margin-top: 130px">
+        <h1 class="font-weight-light" style="color: #9face6; font-weight: bold; font-family: comic sans MS; font-size: xx-large; ">{{ name }}{{ error }}</h1>
+        <p class="font-weight-light" style="color: #9face6; font-weight: bold; font-family: comic sans MS; font-size: large;">{{ symp }}</p>
+      </div>
+
+</div>
+</body>
+</html>

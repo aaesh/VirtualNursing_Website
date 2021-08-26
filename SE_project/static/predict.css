@@ -1,0 +1,57 @@
+/* @extend display-flex; */
+  body {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #222;
+    font-weight: 400;
+    font-family: 'Montserrat';
+    background-image: url("https://ecussleep.com/wp-content/uploads/Ecus_Sleep-Gradient-Background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-position: center center;
+    }
+
+  .container {
+    width: 660px;
+    position: relative;
+    margin: 0 auto; }
+
+
+  .signup-content {
+    background: #fff;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    padding: 50px 85px; }
+
+  .form-group {
+    overflow: hidden;
+    margin-bottom: 20px; }
+
+  .form-submit {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    background-image: -moz-linear-gradient(to left, #200d20, #4a5481);
+    background-image: -ms-linear-gradient(to left, #3c1752, #155783);
+    background-image: -o-linear-gradient(to left, #162d38, #174046);
+    background-image: -webkit-linear-gradient(to left, #052c3b, #2a7897);
+    background-image: linear-gradient(to left, #18584d, #1a203f); }
+  .loginhere {
+    color: #555;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 91px;
+    margin-bottom: 5px; }
+
+

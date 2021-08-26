@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+    <link rel="stylesheet" href="/static/predict.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <title>takehelp</title>
+
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/home">TakeHelp</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+          <a class="nav-link" href="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/search">Search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/help">Help</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+    <div class="main" style="padding: 115px 0; ">
+
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <form id="signup-form" method = POST action="{{ url_for('predict') }}">
+                        <h2 style="text-align: center; font-weight: bold; font-family: comic sans MS; font-size: xx-large;">DISEASE PREDICTION</h2>
+                     <br>
+                        <div class="form-group">
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Name" required value="{{ name }}"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="Glucose" id="Glucose" placeholder="Glucose" required value="{{ Glucose }}"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="Blood_Pressure" id="Blood_Pressure" placeholder="Blood Pressure" required value="{{ Blood_Pressure }}"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="Skin_Thickness" id="Skin_Thickness" placeholder="Skin Thickness" required value="{{ Skin_Thickness }}"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="Pregnancies" id="Pregnancies" class="form-control" placeholder="Pregnancies" required value="{{ Pregnancies }}"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="D_pre_degree_function" id="D_pre_degree_function" placeholder="Diabetes pre degree function" required value="{{ D_pre_degree_function }}"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="Insulin" id="Insulin" placeholder="Insulin" required value="{{ Insulin }}"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="BMI" id="BMI"  placeholder="BMI" required value="{{ BMI }}"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="Heart_Rate" id="Heart_Rate" placeholder="Heart Rate" required value="{{ Heart_Rate }}"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="Age" id="Age" placeholder="Age" required value="{{ Age }}"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" name="Cigarettes" id="Cigarettes" placeholder="Cigarettes per Day (In numbers)" required value="{{ Cigarettes }}"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="Cholesterol" id="Cholesterol" placeholder="Cholesterol" required value="{{ Cholesterol }}"/>
+                        </div>
+                        <div class="form-holder">
+                            <label id="prediction_text" style="font-size: larger; font-family: Muli-Regular; color: {{ colour }}">{{ text }} {{ Probability }}</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="Show Results"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>

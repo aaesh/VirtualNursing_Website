@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+    <link rel="stylesheet" href="/static/login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+    <title>Sign Up</title>
+</head>
+<body>
+
+    <div class="main">
+        <section class="signup">
+            <h1 style="text-align: center; color: white; font-family: 'Times New Roman', Times, serif; font-size: xx-large;">WELCOME TO TAKE HELP</h1>
+            <div class="container">
+                <div class="signup-content">
+                    <form method = POST action="{{ url_for('login') }}" id="signup-form">
+                        <h2 class="form-title">Login to your Account</h2>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="name" id="name" placeholder="Your Name" required/>
+                        </div>
+                        <div class="form-holder">
+                            <label id="error" style="font-family: Muli-Regular; color: red">{{ data1 }}</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-input" name="password" id="password" placeholder="Password" required/>
+                            <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                        </div>
+                        <div class="form-holder">
+                            <label id="error" style="font-family: Muli-Regular; color: red">{{ error }}</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="Login"/>
+                        </div>
+                    </form>
+                    <div class="loginhere">
+                        don't have an account? <a href="/signup" class="loginhere-link">Sign up</a>
+                        <br>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+</body>
+</html>
